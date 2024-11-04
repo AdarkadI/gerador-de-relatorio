@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Usuários</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="orUsuarios : ${ObjetoRelatorioUsuarios}">
+            <td th:text="${orUsuarios.id_usuario}"></td>
+            <td th:text="${orUsuarios.usuario}"></td>
+        </tr>
+        </tbody>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="orServicos : ${ObjetoRelatorioServicos}">
+            <td th:text="${orServicos.id_servico}"></td>
+            <td th:text="${orServicos.nome}"></td>
+        </tr>
+        </tbody>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="orFuncionarios : ${ObjetoRelatorioFuncionarios}">
+            <td th:text="${orFuncionarios.id_funcionario}"></td>
+            <td th:text="${orFuncionarios.nome}"></td>
+        </tr>
+        </tbody>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="orClientes : ${ObjetoRelatorioClientes}">
+            <td th:text="${orClientes.id_cliente}"></td>
+            <td th:text="${orClientes.nome}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
