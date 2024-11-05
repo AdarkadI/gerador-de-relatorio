@@ -24,28 +24,28 @@ public class RelatorioController {
     @GetMapping("/usuario")
     public ModelAndView listarUsuarios() {
         List<Map<String, Object>> usuarios = relatorioService.listarUsuarios();
-        ModelAndView mv = new ModelAndView("/relatorio_pagina");
+        ModelAndView mv = new ModelAndView("/Relatorio_Usuario_Pagina");
         mv.addObject("ObjetoRelatorioUsuarios", usuarios);
         return mv;
     }
     @GetMapping("/servico")
     public ModelAndView listarServicos() {
         List<Map<String, Object>> servicos = relatorioService.listarServicos();
-        ModelAndView mv = new ModelAndView("/relatorio_pagina");
+        ModelAndView mv = new ModelAndView("/Relatorio_Servico_Pagina");
         mv.addObject("ObjetoRelatorioServicos", servicos);
         return mv;
     }
     @GetMapping("/funcionario")
     public ModelAndView listarFuncionarios() {
         List<Map<String, Object>> funcionarios = relatorioService.listarFuncionarios();
-        ModelAndView mv = new ModelAndView("/relatorio_pagina");
+        ModelAndView mv = new ModelAndView("/Relatorio_Funcionario_Pagina");
         mv.addObject("ObjetoRelatorioFuncionarios", funcionarios);
         return mv;
     }
     @GetMapping("/cliente")
     public ModelAndView listarClientes() {
         List<Map<String, Object>> clientes = relatorioService.listarClientes();
-        ModelAndView mv = new ModelAndView("/relatorio_pagina");
+        ModelAndView mv = new ModelAndView("/Relatorio_Cliente_Pagina");
         mv.addObject("ObjetoRelatorioClientes", clientes);
         return mv;
     }
