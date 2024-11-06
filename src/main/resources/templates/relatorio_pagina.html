@@ -68,36 +68,28 @@
 
 <header>
     <div class="col-md-6 offset-md-3">
-        <button type="button" class="logo">NeanderAgenda</button>
+        <button type="button" class="logo" onclick="location.href='/relatorio/'">NeanderAgenda</button>
     </div>
 </header>
 </br>
 <div class="col-md-4 offset-md-1">
     <button type="button" class="volta" href="">voltar</button>
 </div>
-
-<div class="container text-center">
+<div class="col-md-6 offset-md-3">
     </br>
-    <h1>selecione qual relatorio gostaria de visualizar</h1>
-    </br>
+    <button type="button" class="expande" onclick="location.href='/relatorio/cliente'">Clientes</button>
 </div>
 <div class="col-md-6 offset-md-3">
     </br>
-        <button href="@{/relatorio/cliente}" type="button" class="expande">Clientes</button>
+    <button type="button" class="expande" onclick="location.href='/relatorio/funcionario'">Funcionarios</button>
 </div>
 <div class="col-md-6 offset-md-3">
     </br>
-    <button href="@{/relatorio/funcionario}" type="button" class="expande">Funcionarios</button>
+    <button type="button" class="expande" onclick="location.href='/relatorio/servico'">Servicos</button>
 </div>
 <div class="col-md-6 offset-md-3">
     </br>
-    <button href="@{/relatorio/servico}" type="button" class="expande">Servicos</button>
-</div>
-<div class="col-md-6 offset-md-3">
-    </br>
-    <button href="@{/relatorio/usuario}" type="button" class="expande">Usuarios</button>
-    </br>
-
+    <button type="button" class="expande" onclick="location.href='/relatorio/usuario'">Usuarios</button>
 </div>
 </body>
 </html>

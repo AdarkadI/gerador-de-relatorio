@@ -68,7 +68,7 @@
 
 <header>
     <div class="col-md-6 offset-md-3">
-        <button type="button" class="logo">NeanderAgenda</button>
+        <button type="button" class="logo" onclick="location.href='/relatorio/'">NeanderAgenda</button>
     </div>
 </header>
 </br>
@@ -87,12 +87,18 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>email</th>
+            <th>salario</th>
+            <th>telefone</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="orFuncionarios : ${ObjetoRelatorioFuncionarios}">
             <td th:text="${orFuncionarios.id_funcionario}"></td>
             <td th:text="${orFuncionarios.nome}"></td>
+            <td th:text="${orFuncionarios.email}"></td>
+            <td th:text="${orFuncionarios.salario}"></td>
+            <td th:text="${orFuncionarios.telefone}"></td>
         </tr>
         </tbody>
     </table>

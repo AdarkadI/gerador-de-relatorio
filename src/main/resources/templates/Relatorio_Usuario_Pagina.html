@@ -68,7 +68,7 @@
 
 <header>
     <div class="col-md-6 offset-md-3">
-        <button type="button" class="logo">NeanderAgenda</button>
+        <button type="button" class="logo" onclick="location.href='/relatorio/'">NeanderAgenda</button>
     </div>
 </header>
 </br>
@@ -87,12 +87,17 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Nome</th>
+            <th>Senha</th>
+            <th>Data Cad.</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="orUsuarios : ${ObjetoRelatorioUsuarios}">
             <td th:text="${orUsuarios.id_usuario}"></td>
             <td th:text="${orUsuarios.usuario}"></td>
+            <td th:text="${orUsuarios.senha}"></td>
+            <td th:text="${orUsuarios.dt_cadastro}"></td>
         </tr>
         </tbody>
     </table>
