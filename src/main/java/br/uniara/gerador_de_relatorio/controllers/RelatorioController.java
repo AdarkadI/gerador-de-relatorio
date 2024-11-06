@@ -21,6 +21,12 @@ public class RelatorioController {
     /**
      * Este grupo abaixo é para os relatorios locais
      */
+
+    @GetMapping("/")
+    public ModelAndView findAll() {
+        ModelAndView mv = new ModelAndView("relatorio_pagina");
+        return mv;
+    }
     @GetMapping("/usuario")
     public ModelAndView listarUsuarios() {
         List<Map<String, Object>> usuarios = relatorioService.listarUsuarios();
