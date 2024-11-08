@@ -68,12 +68,12 @@
 
 <header>
     <div class="col-md-6 offset-md-3">
-        <button type="button" class="logo">NeanderAgenda</button>
+        <button type="button" class="logo" onclick="location.href='/relatorio/'">NeanderAgenda</button>
     </div>
 </header>
 </br>
 <div class="col-md-4 offset-md-1">
-    <button type="button" class="volta" href="">voltar</button>
+    <button type="button" class="volta" onclick="location.href='/relatorio/'">voltar</button>
 </div>
 
 <div class="container text-center">
@@ -87,12 +87,14 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>valor</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="orServicos : ${ObjetoRelatorioServicos}">
             <td th:text="${orServicos.id_servico}"></td>
             <td th:text="${orServicos.nome}"></td>
+            <td th:text="${orServicos.valor}"></td>
         </tr>
         </tbody>
     </table>
