@@ -3,6 +3,7 @@ package br.uniara.gerador_de_relatorio.controllers;
 import br.uniara.gerador_de_relatorio.services.RelatorioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Map;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/relatorio")
 public class RelatorioController {
@@ -21,6 +22,12 @@ public class RelatorioController {
     /**
      * Este grupo abaixo é para os relatorios locais
      */
+
+    @GetMapping("")
+    public ModelAndView findAll() {
+        ModelAndView mv = new ModelAndView("relatorio_pagina");
+        return mv;
+    }
     @GetMapping("/usuario")
     public ModelAndView listarUsuarios() {
         List<Map<String, Object>> usuarios = relatorioService.listarUsuarios();
