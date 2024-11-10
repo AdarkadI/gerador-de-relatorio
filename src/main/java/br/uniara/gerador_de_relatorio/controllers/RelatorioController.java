@@ -23,7 +23,7 @@ public class RelatorioController {
      * Este grupo abaixo é para os relatorios locais
      */
 
-    @GetMapping("/")
+    @GetMapping("")
     public ModelAndView findAll() {
         ModelAndView mv = new ModelAndView("relatorio_pagina");
         return mv;
